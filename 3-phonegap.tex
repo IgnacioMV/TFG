@@ -1,0 +1,107 @@
+\chapter{PhoneGap}
+\justifying
+\section{Introduction}
+
+Adobe PhoneGap is a web-based mobile development framework based on the open source Apache Cordova project, which allows the creation of hybrid mobile applications using HTML5, CSS and JavaScript. It is currently under development by Adobe.
+
+PhoneGap can build apps for Android, BlackBerry 10, iOS, Windows, Windows Phone, Symbian, Tizen and webOS. The user interface is built using the traditional web development skills already stated, which are executed within wrappers targeted to each platform, and rely on API bindings, to access each devices built-in components. 
+
+PhoneGap's container consists basically of a native WebView where the HTML5 code is embedded. Native resources such as the camera, accelerometer or geolocation are accessed through a foreign function interface. Its fucntionalities can be extended with native plugins that allow developers to add more capabilities that can be called from the JavaScript code.
+
+PhoneGap's most relevant features will be reviewed next.
+
+\section{Apache Cordova}
+
+Apache Cordova is the framework on top of which PhoneGap is built. In short, PhoneGap is an extension of Cordova in terms of functionality and tools. A high-level view of a Cordova application architecture is shown in the following diagram.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{cordova_architecture.png}
+	\caption{Cordova Architecture\label{fig:cordarch}}
+\end{figure}
+
+As we can see in Figure \ref{fig:cordarch}, there are two clearly separated levels: the mobile operative system and the Cordova application. 
+
+The first one is the lowest as well, and is in charge of managin the device sensors, services, graphics and other input. To gain acces to all of these, the Cordova application makes use of a series of operative system APIs. This level has been kept intentionally simple because is out of the scope of this work.
+
+The latter is described with a little more detail. There are three main elements: 
+
+\begin{itemize} 
+ \item \textbf{Web App:} user interface (UI) and apps logic. The UI is developed as any web application frontend using HTML5 and CSS, while JavaScript takes care of the logic. ``config.xml'' is a W3C widget specification compliant file that allows the developer to specify metadata about the app. Images, audio, etc. would be part of the application resources.
+ \item \textbf{HTML rendering engine:} also referred as the WebView. Cordova uses the native browser engine provided for each platform to render the application. For example, on iOS, this is the Objective C UIWebView class, while on Android this is the android.webkit.WebView. This way of rendering views is much slower than the native rendering, usually hurting the apps performance and the user experience. Besides, there are differences in the native browser engine between operating systems which may result in errors, bugs and other inconveniences. Obviously, this is a major drawback of Apache Cordova and should be considered carefully. 
+ \item \textbf{Cordova plugins:} plugins allow invoking native code from JavaScript. A series of core plugins are provide access to the most basic device features such as the camera, contacts or battery. PhoneGap plugins will be further discussed in the following pages.
+\end{itemize}
+
+\section{PhoneGap Main Features}
+
+As PhoneGap is built on top of Apache Cordova, it extends all of its features and provides some new ones as well.
+
+\subsection{Desktop app and command line interface}
+
+PhoneGap provides both a desktop app and a command line interface (CLI) as tools to ease the creation, compilation, test and deployment of an application. 
+
+The CLI is written on top of Apache Cordova and distributed on Node Package Manager (NPM). It is available on any platform and is the most powerful way to use PhoneGap.
+
+However, a desktop app is provided as well for Mac and Windows. Way simpler than the CLI, allows to create and serve apps to a connected mobile device. The GUI makes it easier to use, but advanced functions are not implemented, rendering it considerably less powerful.
+
+\subsection{Mobile developer app}
+
+The developer mobile app enables the developer to quickly see how the mobile app works and feels on a real device. However, it currently supports only three platforms, which, on the other hand, comprise over 99\% of the market share: iOS, Android and Windows Phone.
+
+\subsection{Local and remote building}
+
+For most platforms, PhoneGap can compile a project locally, or can be sent to a PhoneGap  Build server to be compiled remotely. Platform availability of each service is presented in the next table.
+
+\begin{table}[H]
+\def\tabularxcolumn#1{m{#1}}
+\Centering
+\captionsetup{justification=centering}
+\hyphenpenalty=10000
+\label{3-4}
+\setlength\tabcolsep{3pt}
+\footnotesize
+\begin{tabularx}{15cm}{|X|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Platform        & Android    & Blackberry (6) & Blackberry 10& iOS        & WP7        & WP8        & W8         & Tizen      & webOS      & Symbian    \\ \hline
+Local Building  & \checkmark & \checkmark     & \checkmark   & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark &            &            \\ \hline
+Remote Building & \checkmark & \checkmark     &              & \checkmark & \checkmark &            &            &            & \checkmark & \checkmark \\ \hline
+\end{tabularx}
+\caption{Platforms supported by PhoneGap's local and remote building}
+\end{table}
+
+\subsection{Plugins}
+
+A PhoneGap plugin is a piece of code that provides a JavaScript interface to interact with native buil-in components. They allow an application to use all the native capabilities that are not available to web apps. These plugins give the developer the ability to further extend functionality and interact in more detail with device features and functions that are not already exposed thorugh the existing Apache Cordova plugin API.
+
+Current native device features supported for each platform are shown in the next table:
+
+\begin{table}[H]
+\def\tabularxcolumn#1{m{#1}}
+\Centering
+\captionsetup{justification=centering}
+\hyphenpenalty=10000
+\label{3-5}
+\scriptsize
+\setlength\tabcolsep{1pt}
+\begin{tabularx}{15cm}{|X|c|Y|Y|c|Y|Y|c|c|c|c|}
+\hline
+Platform      & Android                      & Blackberry (6)                      & Blackberry 10                     & iOS                      & WP7                            & WP8                            & W8                      & Tizen                      & webOS                      & Symbian                      \\ \hline
+Accelerometer & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 & \checkmark                   \\ \hline
+Camera        & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 & \checkmark                   \\ \hline
+Capture       & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     &                       &                          &                           &                             \\ \hline
+Compass       & \checkmark                   &                                   & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 &                            \\ \hline
+Connection    & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 & \checkmark                   \\ \hline
+Contacts      & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              &                          &                          & \checkmark                   \\ \hline
+Device        & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 & \checkmark                   \\ \hline
+Events        & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 & \checkmark                   \\ \hline
+File          & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark (No file transfer)  & \checkmark (No file transfer)  & \checkmark              &                          &                          &                            \\ \hline
+Geolocation   & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 & \checkmark                   \\ \hline
+Globalization & \checkmark                   & \checkmark                          &                                 & \checkmark               &                              & \checkmark                     &                       &                          &                           &                             \\ \hline
+InAppBrowser  & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     &                       &                          &                           &                             \\ \hline
+Media         & \checkmark                   &                                   & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 &                          &                            \\ \hline
+Notification  & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              & \checkmark                 & \checkmark                 & \checkmark                   \\ \hline
+Spashscreen   & \checkmark                   &                                   & \checkmark                        & \checkmark               & \checkmark                     & \checkmark                     & \checkmark              &                          &                           &                             \\ \hline
+Storage       & \checkmark                   & \checkmark                          & \checkmark                        & \checkmark               & \checkmark (local storage only) & \checkmark (local storage only) & \checkmark              & \checkmark                 & \checkmark                 &                            \\ \hline
+\end{tabularx}
+\caption{Device native features currently supported for each platform.}
+\end{table}

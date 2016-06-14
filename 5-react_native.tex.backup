@@ -1,0 +1,60 @@
+\chapter{React Native}
+\justifying
+\section{Introduction}
+
+React Native is a framework for building hybrid mobile applications based on React. It was announced on 2015 by Facebook and is currently under development, receiving updates every two weeks. React Native is constantly evolving, so new features not included in this work may become available as time passes.
+
+React Native libraries provide the React architecture to iOS and Android applications. These two systems are the only ones available, but this should not be a worrying issue as they comprise around 90\% of the market share.
+
+Due to Apple policies, development of iOS mobile applications can only be done on a Mac machine. On the other hand, Android apps can be developed on Mac, Linux and Windows. However, React Native is still on a very early version, and development on a Windows environment can sometimes be unstable.
+
+\section{Main Goal}
+
+React Native's main goal is achieving native performance, feeling and capabilities, while keeping an easier and more friendly environment for development. React Native mobile applications are written using only JavaScript as opposed to PhoneGap, which uses HTML5, CSS and JavaScript. This means that a JavaScript layer must be added.
+
+However, if this is not done properly, it could result in low frame rate, slow performance and bad user experience in general. To avoid all of these, React Native implements a few features which will described next.
+
+\section{Asynchronus and batched} 
+
+The JavaScript layer is asynchronus and runs on a separate thread from the main one. This way, the rendering will not be affected by any operations that are performed in the JavaScript thread. Moreover, native instructions that have to be executed can be batched and run whenever the device can. Actions such as decoding an image or saving to disk could potentially block the user interface even for seconds, but this way, the app will remain fluid and responsive.
+
+In addition, all the communication is fully serializable, which allows using Chrome Developer Tools to debug the JavaScript code while running the complete app.
+
+\section{Declarative vs Imperative:} 
+
+React is declarative, meaning that it focuses on what the application should do instead of how it must be done. However, native development uses an imperative paradigm, i.e. consists mostly of commands for the device to execute. So all changes that have to be made to the interface must be converted from declarative to imperative. This is achieved by using thin wrappers that run on background processes to take advantage of multicore architectures and avoid interfering with the main thread. For instance, lets take the following example based on Android:
+
+\begin{table}[H]
+\centering
+\label{declarative-imperative-example}
+\begin{tabular}{lll}
+$<$div$>$ & $\rightarrow$ & $<$View$>$  \\
+$<$span$>$ & $\rightarrow$ &   $<$Text$>$\\
+$<$img$>$  & $\rightarrow$ & $<$Image$>$
+\end{tabular}
+\end{table}
+
+Here, the well-known \code{div}, \code{span} and \code{img} HTML tags turn into their Android code equivalent. This way, React Native avoids using WebViews, so everything on screen is purely native. On PhoneGap the WebView caused most of the trouble such as frame rate drops or low performance, but React Native is not hampered by this.
+
+\subsection{Learn once, write everywhere}
+
+React Native does not aim to achieve the write one run everywhere idea where the same code powers every platform. Each system has a different feeling and behaviour, and therefore iOS and Android mobile applications feel and behave differently. Instead, the main goal is using the same set of principles for every system, so building the same app for iOS and Android requires no significant amount of extra work, but it feels like a native application on both platforms.
+
+\section{Architecture}
+
+As has been stated, React Native code is not exactly the same for an iOS app than for an Android app. The situation is very similar when we take a look at React Native's architecture, and must be explained separetely. However, they share a basic structure, which is shown in Figure \ref{fig:rnbasicarch}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{rn_basic_architecture.png}
+	\caption{React Native basic architecture\label{fig:rnbasicarch}}
+\end{figure}
+
+As we can see, there are 3 main layers:
+
+\begin{itemize}
+ \item \textbf{Native:} Native or device, which runs Java on Android or C++ on iOS. Collects data about every event, notifies JS and processes the commands that the Bridge delivers. 
+ \item \textbf{Bridge:} the Bridge connects the Native layer with the JS VM. Communication in both ways is fully serializable.
+ \item \textbf{JS VM:} the JavaScript Virtual Machine runs the code. In this case, the virtual machine used is JavaScriptCore. It needs to be shipped with every app, which adds around 3.5MB to its size on Android, while on iOS JavaScriptCore is part of the system.
+\end{itemize}
+

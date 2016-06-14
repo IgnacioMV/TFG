@@ -1,0 +1,69 @@
+\chapter{React}
+\justifying
+\section{Introduction}
+
+React is a JavaScript library for creating composable user interfaces. It was built meant for big applications with tons of data that changes over time. React keeps track of the data and automatically updates the views when it changes. However, it only updates parts affected by those changes, improving performance.
+
+Views are built using reusable components. These are encapsulated, making testing and isolating elements a very easy task.
+
+\section{Flux}
+
+Flux is an architecture concept that implements a unidirectional data flow. This means that data only flows in one direction, progressing through stages until it reaches the end of the chain. In Flux, this is implemented as follows: and  action propagates through a central dispatcher to the various stores that contain the application's logic and data, which then updates all the views that are affected. This structure if much more efficient than two-way data binding and makes a program much easier to reason about.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{flux_flow.png}
+	\caption{Flux unidirectional data flow\label{fig:fluxflow}}
+	
+\end{figure}
+
+As shown in Figure \ref{fig:fluxflow}, all data flows through the dispatcher. Actions usually originate from the user's interactions with the views. The dispatchers invokes callbacks according to the stores that have registered with it. Stores update the necessary data and proceed to alert the views, which in turn update their own data and perform a re-render of themselves and all their descendants in the component tree.
+
+\section{JSX}
+
+JSX is a JavaScript extension to make it look similar to XML. Though using it is optional, its very concise and familiar syntax make it great for defining tree structures with attributes. It has the following characteristics:
+
+\begin{itemize}
+ \item \textbf{Faster code:} JSX code has to be compiled to JavaScript. However, the resulting code is faster than the equivalent code directly written in JavaScript, thanks to the optimizations performed by the compiler.
+ \item \textbf{More strict:} JSX is mostly type-safe. This leads to many error being caught in the compiling process, and consequently not reaching the final product.
+ \item \textbf{Easier:} JSX has a class system similar to Java so developers can avoid using the prototype-based inheritance system provided by JavaScript. However, expressions and statements remain almost the same, so it is easy for developers to switch to JSX.
+\end{itemize}
+
+Because all of these, applications developed using JSX instead of JavaScript will achieve an overall higher quality. A fragment of code is shown next, both in JSX and JavaScript, to show the differences. The translation was performed by Babel.js, a JavaScript library specially designed to translate JSX to JavaScript, among other features.
+
+\lstset{style=myhtml,linewidth=7cm}
+
+\begin{table}[H]
+\centering
+\label{my-label}
+\begin{tabularx}{15cm}{XX}
+\lstinputlisting[label=exampleJSX,caption=Sample JSX code,language=JavaScript]{./code/jsxexample.jsx} & \lstinputlisting[label=exampleJScompiled,caption=Sample JSX code translated to JavaScript using Babel,language=JavaScript]{./code/jsxcompiledexample.js}
+\end{tabularx}
+\end{table}
+
+\section{Virtual DOM}
+
+A Document Object Model is an API for HTML and XML documents. It defines their logical structure and the way they are accessed and manipulated. The specifications have been defined by the World Wide Web Consorctium or W3C. DOM documents have a logical structure that resembles a tree, which is why it is usually referred as DOM tree. A root node serves as the root of the tree for the document.
+
+For instance, consider the following HTML piece of code, and a graphical representation of the DOM that would be generated.
+
+\lstset{style=myhtml, otherkeywords={HTML,HEAD,TBODY,BODY,TABLE,TR,TD},linewidth=15cm}
+\lstinputlisting[label=tableHTML,caption=Sample HTML code,language=HTML]{./code/table.html}
+\lstinputlisting[label=tableDOM,caption=DOM code generated,language=HTML]{./code/tableDOM}
+
+To render a document such as an HTML page, browsers use an internal DOM. The whole HTML code is automatically parsed and a DOM of the page is generated. This enables JavaScript to create dynamic HTML, meaning it can add, modify or remove HTML elemts, change CSS styles, and create or react to events.
+
+However, whenever a change has to be made, the whole DOM needs to be remade. This results in very low performances, specially on modern pages with thousands of nodes. In fact, accessing a node can take seconds sometimes.
+
+To solve this issue, React makes use of an abstract, light-wight version of the DOM, known as Virtual DOM. Once changes have been saved in the Virtual DOM, the browser compares it with the real DOM, finds the differences and only updates what should be changed. These updates happen whenever data changes. The whole process is much more efficient than directly modifying the DOM as it does not require all the heavyweight parts included in it.
+
+\section{Example Component}
+
+React components implement two very important features related to input data and internal state data: \code{props} and \code{state}. The first one provides a way of passing input data and can be accessed using a \code{render()} method which is available for every React component; while the latter is used to inform React of a data change. Every time the state of a component changes, a user interface update is triggered. In fact, React components can be seen as simple state machines.
+
+An example component is shown next, where both \code{props} and \code{state} are used. This snippet simply salute a user called \textit{Juan} and counts the elapsed seconds since the user loaded it. Trying it out is very simple, as many online live compilers exist.
+
+\lstset{style=myhtml}
+\lstinputlisting[label=reactExample,caption=Sample React component,language=JavaScript]{./code/reactexample.jsx}
+
+As we can see, components are React classes. The first thing to do is setting the component's state, if any is needed at all. Keeping as many components as possible stateless is essential, as any state update triggers an update and affects performance. 

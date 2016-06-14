@@ -53,7 +53,7 @@ However, these advantages come at a price:
 	\item \textbf{Unfamiliar feeling:} users will not be as familiar with a web application as they would be with a native application, and therefore the user experience will resent.
 \end{itemize}
 
-As we just explained, web mobile applications excel at almost every aspect where native mobile applications suffer. In general, they are suited for simple tasks like adapting websites with a lot of text to the tiny screen of a mobile device, but tend to be bad a bad design choice for more specific tasks like highly interactive or tight security apps. Also, statistics show that 90\% of the time on mobile devices is spent in apps, and not in the browser. Additionally, more and more companies are shifting to native apps because the overall superior user experience.
+As we just explained, web mobile applications excel at almost every aspect where native mobile applications suffer. In general, they are suited for simple tasks like adapting websites with a lot of text to the tiny screen of a mobile device, but tend to be bad a bad design choice for more specific tasks like highly interactive or tight security apps. Also, statistics show that 90\% of the time on mobile devices is spent in apps, and not in the browser. 
 
 \section{Hybrid Mobile Applications}
 
@@ -104,5 +104,19 @@ Other multi-touch              & Yes                         & No               
 
 \vfill
 
+\section{Dependencies}
 
+Both PhoneGap and React Native make use of a series of separate technologies. These are briefly explained here in order to facilitate the understanding of this work.
+
+\subsection{Node Package Manager}
+
+As its name says, Node Package Manager or NPM is a package manager for JavaScript. It eases the task of installing, sharing and distributing code, manages dependencies in a project and helps giving and receiving feedback with others.
+
+\subsection{Gradle}
+
+Gradle is an open source general-purpose build automation system for the building, testing, publishing and deployment of software packages, websites, applications and others. It uses a domain-specific language based on Groovy. It takes the best features of other builing systems, such as Maven or Ant, and combines them into one.
+
+\subsection{Watchman}
+
+Watchman is a system designed to watch files and record when they change. It can also trigger actions when a change is made.
 
