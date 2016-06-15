@@ -53,8 +53,61 @@ As has been stated, React Native code is not exactly the same for an iOS app tha
 As we can see, there are 3 main layers:
 
 \begin{itemize}
- \item \textbf{Native:} Native or device, which runs Java on Android or C++ on iOS. Collects data about every event, notifies JS and processes the commands that the Bridge delivers. 
- \item \textbf{Bridge:} the Bridge connects the Native layer with the JS VM. Communication in both ways is fully serializable.
+ \item \textbf{Native:} renders the user interface and manages native events.
+ \item \textbf{Bridge:} the Bridge connects the Native layer with the JS VM.
  \item \textbf{JS VM:} the JavaScript Virtual Machine runs the code. In this case, the virtual machine used is JavaScriptCore. It needs to be shipped with every app, which adds around 3.5MB to its size on Android, while on iOS JavaScriptCore is part of the system.
 \end{itemize}
 
+\subsection{Runtime}
+
+The problem of concurrence has been traditionally tacked by using threads. A process can have many threads, each managed independently by a scheduler. As it is a very well-known concept, there is no need for going into details. However, React Native uses queues to solve the issue. Queues are First-In-First-Out data structure that allows the insertion and deletion of elements, also known as enqueueing and dequeueing. Queues hold the data until the receiver can retrieve it.
+
+There are 3 main queues in React Native:
+
+\begin{itemize}
+ \item \textbf{Shadow queue:} creates the layout.
+ \item \textbf{Main thread:} thread run by default in a native app.
+ \item \textbf{JavaScript thread:} runs the JavaScript code.
+\end{itemize}
+
+In addition, every native module, such as networking, images, etc. has its own queue unless it is specified otherwise.
+
+Figure \ref{fig:rnruntime} shows a graph of what happens when a React Native application is run. The action that appear in the graph are described next.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{rn_runtime.png}
+	\caption{React Native application runtime graph\label{fig:rnruntime}}
+\end{figure}
+
+\begin{itemize}
+ \item \textbf{Run a React Native app:} when the user runs the application, three actions are triggered: loading the JavaScript bundle, loading the Native Modules and starting the JavaScript Virtual Machine.
+ \item \textbf{Load the JavaScript bundle:} grabs all the dependencies and puts them into one single script, so React will only deal with this file. To avoid hanging up, a separate thread takes care of the process.
+ \item \textbf{Load the Native Modules:} loads all the necessary native modules such as networking, image, local storage, etc. This process is split between the bridge and the module itself: the native module is loaded into the memory and then it calls the bridge to register this module. This way, the bridge knows from the very beggining all the modules that exist, and can create any required instances.
+ \item \textbf{Start the JavaScript VM:} a new instance of the JavaScript VM is created in a new thread, and all the native hooks that React Native has are provided. These include high precision timers, logging, shotcuts for optimization and all the synchronous methods that React Native exports, among others.
+ \item \textbf{Load the JSON configuration:} once all the native modules are loaded and the JavaScript VM has started, all the modules and the mothods they have are put into a JSON object. JavaScript will use this information to create objects at runtime.
+ \item \textbf{Execute the application's JavaScript bundle:} once the JSON configuration is finished, the JS VM starts executing the code.
+ \item \textbf{Abstract JavaScript Execution:} JavaScript has four possible entry points: you can call a callback, call a method, execute an application script or load configuration. To avoid having a graph with four descendants, all of them have been placed together in this node.
+ \item \textbf{Create Shadow Views:} once the JavaScript code has been executed and created the component objects, each one will have a shadow view which contains the layout information.
+ \item \textbf{Layout:} the layout is computed in a background thread. An absolute position and size is generated for each view.
+ \item \textbf{Create the Native Views:} in parallel with the creation of the shadow views and the layout computing, the native views that will be used to render the app screen are create.
+ \item \textbf{}
+ \item \textbf{}
+ \item \textbf{}
+ \item \textbf{}
+ \item \textbf{}
+ \item \textbf{}
+ \item \textbf{}
+ \item \textbf{}
+\end{itemize}
+
+
+\subsection{Call cycle}
+
+The typical  call cycle is shown in Figure \ref{fig:rncallcyclesummary}. JavaScript is event-driven, so once the device detects that event (network, touch, etc.), it collects all the necessary data and sends it to the JavaScript Virtual Machine, encoded as JSON. The Bridge serializes the data and pushes it. The JS VM handles the event and decides what native methods should be called. These are bundled and sent to the Native layer through the Bridge, which serializes the response. In this case, the JavaScript output is enconded as JSON, and is then converted into the right type depending on the system. In turn, the native device processes the commands and updates the user interface.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{rn_callcycle_summary.png}
+	\caption{React Native app call cycle\label{fig:rncallcyclesummary}}
+\end{figure}

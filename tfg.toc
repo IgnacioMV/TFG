@@ -30,19 +30,20 @@
 \contentsline {section}{\numberline {5.4}Declarative vs Imperative:}{22}
 \contentsline {subsection}{\numberline {5.4.1}Learn once, write everywhere}{23}
 \contentsline {section}{\numberline {5.5}Architecture}{23}
-\contentsline {subsection}{\numberline {5.5.1}Call cycle}{23}
-\contentsline {chapter}{\numberline {6}Test Scenario}{25}
-\contentsline {section}{\numberline {6.1}Introduction}{25}
-\contentsline {section}{\numberline {6.2}Dependencies}{25}
-\contentsline {subsection}{\numberline {6.2.1}React Native Command Line Tools}{25}
-\contentsline {subsection}{\numberline {6.2.2}Node Package Manager}{26}
-\contentsline {subsection}{\numberline {6.2.3}Gradle}{26}
-\contentsline {subsection}{\numberline {6.2.4}Watchman}{26}
-\contentsline {subsection}{\numberline {6.2.5}Flow}{26}
-\contentsline {subsection}{\numberline {6.2.6}Android SDK}{26}
-\contentsline {subsection}{\numberline {6.2.7}Nuclide}{26}
-\contentsline {subsection}{\numberline {6.2.8}Genymotion}{26}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{27}
-\contentsline {section}{\numberline {7.1}Conclusions}{27}
-\contentsline {section}{\numberline {7.2}Achieved Goals}{27}
-\contentsline {section}{\numberline {7.3}Future Work}{27}
+\contentsline {subsection}{\numberline {5.5.1}Runtime}{23}
+\contentsline {subsection}{\numberline {5.5.2}Call cycle}{27}
+\contentsline {chapter}{\numberline {6}Test Scenario}{28}
+\contentsline {section}{\numberline {6.1}Introduction}{28}
+\contentsline {section}{\numberline {6.2}Dependencies}{28}
+\contentsline {subsection}{\numberline {6.2.1}React Native Command Line Tools}{28}
+\contentsline {subsection}{\numberline {6.2.2}Node Package Manager}{29}
+\contentsline {subsection}{\numberline {6.2.3}Gradle}{29}
+\contentsline {subsection}{\numberline {6.2.4}Watchman}{29}
+\contentsline {subsection}{\numberline {6.2.5}Flow}{29}
+\contentsline {subsection}{\numberline {6.2.6}Android SDK}{29}
+\contentsline {subsection}{\numberline {6.2.7}Nuclide}{29}
+\contentsline {subsection}{\numberline {6.2.8}Genymotion}{29}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{30}
+\contentsline {section}{\numberline {7.1}Conclusions}{30}
+\contentsline {section}{\numberline {7.2}Achieved Goals}{30}
+\contentsline {section}{\numberline {7.3}Future Work}{30}
