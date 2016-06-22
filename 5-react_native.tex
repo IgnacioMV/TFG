@@ -1,26 +1,29 @@
 \chapter{React Native}
+\label{ch:reactnative}
 \justifying
 \section{Introduction}
 
-React Native is a framework for building hybrid mobile applications based on React. It was announced on 2015 by Facebook and is currently under development, receiving updates every two weeks. React Native is constantly evolving, so new features not included in this work may become available as time passes.
+React Native is a framework for building hybrid mobile applications based on React. It was announced on April 2015 by Facebook at the Facebook Developer Conference~\cite{f8} and is currently under development, receiving updates every two weeks. React Native is constantly evolving, so new features not included in this work may become available as time passes.
 
-React Native libraries provide the React architecture to iOS and Android applications. These two systems are the only ones available, but this should not be a worrying issue as they comprise around 90\% of the market share.
+React Native libraries provide the React architecture to iOS and Android applications. These two systems are the only ones available, but this should not be a worrying issue as they comprise around 90\% of the market share~\cite{3topmarketshare}.
 
 Due to Apple policies, development of iOS mobile applications can only be done on a Mac machine. On the other hand, Android apps can be developed on Mac, Linux and Windows. However, React Native is still on a very early version, and development on a Windows environment can sometimes be unstable.
 
-\section{Main Goal}
+\section{The Implications of Native}
 
-React Native's main goal is achieving native performance, feeling and capabilities, while keeping an easier and more friendly environment for development. React Native mobile applications are written using only JavaScript as opposed to PhoneGap, which uses HTML5, CSS and JavaScript. This means that a JavaScript layer must be added.
+React Native stands out from other methods of cross-platform mobile application development due to the fact that it uses its host's standard rendering API's. Currently existing frameworks that enable the development of mobile apps using HTML, CSS and JavaScript render their views using WebViews. As has been previously stated, this is a valid approach and can work, but implies a series of drawbacks, mainly bad performance. When these technologies try to mimic the native user interface elements, they feel a little off, and details like animations take enormous amount of work to implement and usually cause drops in the frame rate.
+
+React Native's main goal is achieving native performance, feeling and capabilities, while keeping an easier and more friendly environment for development. React Native mobile applications are written using only JavaScript as opposed to PhoneGap, which uses HTML5, CSS and JavaScript. In practical terms, this means that a JavaScript layer must be added.
 
 However, if this is not done properly, it could result in low frame rate, slow performance and bad user experience in general. To avoid all of these, React Native implements a few features which will described next.
 
-\section{Asynchronus and batched} 
+\subsection{Asynchronus and batched} 
 
 The JavaScript layer is asynchronus and runs on a separate thread from the main one. This way, the rendering will not be affected by any operations that are performed in the JavaScript thread. Moreover, native instructions that have to be executed can be batched and run whenever the device can. Actions such as decoding an image or saving to disk could potentially block the user interface even for seconds, but this way, the app will remain fluid and responsive.
 
-In addition, all the communication is fully serializable, which allows using Chrome Developer Tools to debug the JavaScript code while running the complete app.
+In addition, all the communication is fully serializable, which allows using Chrome Developer Tools~\cite{chromedevtools} to debug the JavaScript code while running the complete app.
 
-\section{Declarative vs Imperative:} 
+\subsection{Declarative vs Imperative:} 
 
 React is declarative, meaning that it focuses on what the application should do instead of how it must be done. However, native development uses an imperative paradigm, i.e. consists mostly of commands for the device to execute. So all changes that have to be made to the interface must be converted from declarative to imperative. This is achieved by using thin wrappers that run on background processes to take advantage of multicore architectures and avoid interfering with the main thread. For instance, lets take the following example based on Android:
 
@@ -55,12 +58,13 @@ As we can see, there are 3 main layers:
 \begin{itemize}
  \item \textbf{Native:} renders the user interface and manages native events.
  \item \textbf{Bridge:} the Bridge connects the Native layer with the JS VM.
- \item \textbf{JS VM:} the JavaScript Virtual Machine runs the code. In this case, the virtual machine used is JavaScriptCore. It needs to be shipped with every app, which adds around 3.5MB to its size on Android, while on iOS JavaScriptCore is part of the system.
+ \item \textbf{JS VM:} the JavaScript Virtual Machine runs the code. In this case, the virtual machine used is JavaScriptCore~\cite{javascriptcore}. It needs to be shipped with every app, which adds around 3.5MB to its size on Android, while on iOS JavaScriptCore is part of the system.
 \end{itemize}
 
 \subsection{Runtime}
+\label{subsec:runtime}
 
-The problem of concurrence has been traditionally tacked by using threads. A process can have many threads, each managed independently by a scheduler. As it is a very well-known concept, there is no need for going into details. However, React Native uses queues to solve the issue. Queues are First-In-First-Out data structure that allows the insertion and deletion of elements, also known as enqueueing and dequeueing. Queues hold the data until the receiver can retrieve it.
+The problem of concurrence has been traditionally tackled by using threads. A process can have many threads, each managed independently by a scheduler. As it is a very well-known concept, there is no need for going into details. However, React Native uses queues to solve the issue. Queues are First-In-First-Out data structure that allows the insertion and deletion of elements, also known as enqueueing and dequeueing. Queues hold the data until the receiver can retrieve it.
 
 There are 3 main queues in React Native:
 
@@ -70,15 +74,7 @@ There are 3 main queues in React Native:
  \item \textbf{JavaScript thread:} runs the JavaScript code.
 \end{itemize}
 
-In addition, every native module, such as networking, images, etc. has its own queue unless it is specified otherwise.
-
-Figure \ref{fig:rnruntime} shows a graph of what happens when a React Native application is run. The action that appear in the graph are described next.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1\linewidth]{rn_runtime.png}
-	\caption{React Native application runtime graph\label{fig:rnruntime}}
-\end{figure}
+In addition, every native module, such as networking, images, etc. has its own queue unless it is specified otherwise. Figure \ref{fig:rnruntime1} shows a graph of what happens when a React Native application is run. The action that appear in the graph are described next.~\cite{runtimeconference}
 
 \begin{itemize}
  \item \textbf{Run a React Native app:} when the user runs the application, three actions are triggered: loading the JavaScript bundle, loading the Native Modules and starting the JavaScript Virtual Machine.
@@ -91,23 +87,93 @@ Figure \ref{fig:rnruntime} shows a graph of what happens when a React Native app
  \item \textbf{Create Shadow Views:} once the JavaScript code has been executed and created the component objects, each one will have a shadow view which contains the layout information.
  \item \textbf{Layout:} the layout is computed in a background thread. An absolute position and size is generated for each view.
  \item \textbf{Create the Native Views:} in parallel with the creation of the shadow views and the layout computing, the native views that will be used to render the app screen are create.
- \item \textbf{Render to screen:} once both the layout and the native views have been created, they are combined into the final layout og the application.
- \item \textbf{}
- \item \textbf{}
- \item \textbf{}
- \item \textbf{}
- \item \textbf{}
- \item \textbf{}
- \item \textbf{}
+ \item \textbf{Render to screen:} once both the layout and the native views have been created, they are combined into the final layout of the application.
 \end{itemize}
-
-
-\subsection{Call cycle}
-
-The typical  call cycle is shown in Figure \ref{fig:rncallcyclesummary}. JavaScript is event-driven, so once the device detects that event (network, touch, etc.), it collects all the necessary data and sends it to the JavaScript Virtual Machine, encoded as JSON. The Bridge serializes the data and pushes it. The JS VM handles the event and decides what native methods should be called. These are bundled and sent to the Native layer through the Bridge, which serializes the response. In this case, the JavaScript output is enconded as JSON, and is then converted into the right type depending on the system. In turn, the native device processes the commands and updates the user interface.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{rn_callcycle_summary.png}
-	\caption{React Native app call cycle\label{fig:rncallcyclesummary}}
+	\includegraphics[width=0.7\linewidth]{rn_runtime1.png}
+	\caption{React Native application runtime graph\label{fig:rnruntime1}}
 \end{figure}
+
+\subsection{Call cycle}
+
+The typical  call cycle is shown in Figure \ref{fig:rnruntime2}. JavaScript is event-driven, so once the device detects that event (network, touch, etc.), it collects all the necessary data and sends it to the JavaScript Virtual Machine, encoded as JSON. The Bridge serializes the data and pushes it. The JS VM handles the event and decides what native methods should be called. These are bundled and sent to the Native layer through the Bridge, which serializes the response. In this case, the JavaScript output is enconded as JSON, and is then converted into the right type depending on the system. In turn, the native device processes the commands and updates the user interface. Step by step, the actions taken are the following:
+
+\begin{itemize}
+ \item \textbf{User Interaction and Device:} one of the two two entry points in the call cycle. The user interacts with the device and generates an event such as a touch, so device notifies the native system.
+ \item \textbf{Native:} the native layer processes the information generated by the device and decides which native module should call. For example, React Native has its own touch handler, that would send out to the appropriate native module.
+ \item \textbf{Native Event:} the second entry point to the call cycle. A native event refers to any action 
+ \item \textbf{Native Module:} this module dispatches the event to React. The call can directly come from another native module such as an alert, or from a user interaction with the application.
+ \item \textbf{Abstract JavaScript Execution:} the JS VM executes the necessary code to respond to the event, which may require a call to another native module. In this case, JavaScript executes a call to native; but if no more native calls are required, it proceeds to re-render the screen in the same manner as explained in Paragraph \ref{subsec:runtime}.
+ \item \textbf{JavaScript call to native:} JavaScript calls back to native to require a native module.
+ \item \textbf{Bridge:} the Bridge takes the array of calls, matches them to the right modules and runs the necessary threads. After that, it gets back to the Native Module, which in turn dispatches the action to React.
+\end{itemize}
+
+As we can see, the JavaScript Execution - JavaScript call to native - Bridge - Native Module loop can be repeated as many times as necessary before re-rendering the view.~\cite{runtimeconference}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{rn_runtime2.png}
+	\caption{React Native app call cycle\label{fig:rnruntime2}}
+\end{figure}
+
+\section{Components}
+
+React Native components are very simmilar to React's. However, there are some differences that must be explained.
+
+\subsection{Native Components}
+\label{subsec:nativecomps}
+
+As has already been stated, React Native is declarative, and a simple example on React web components and their React Native equivalents was shown. But React Native uses native components, which are invoked from the JavaScript code. Listing \ref{lst:reactNativeComponentExample} provides an example of a very simple React Native application.
+
+\lstset{style=myhtml}
+\lstinputlisting[label={lst:reactNativeComponentExample},caption=Sample React Native app,language=JavaScript]{./code/reactNativeAppShortExample.js}
+
+Parts of the code have been left out to highlight the structure. Every React Native app must include the following four parts:
+
+\begin{itemize}
+ \item \textbf{Imports:} modules and components that will be used in the application must be imported before creating the React Native class. In this case, React is imported along with the necessary components from the React Native library.
+ \item \textbf{Class:} here is where both the logic and view of the component are implemented. The \code{render()} method is mandatory, and should be always implemented. In this case, there are only two components: a parent \code{View} which contains a \code{Text} welcoming us to React Native.
+ \item \textbf{Styles:} style and graphic design of every component are placed in a stylesheet to separate the logic from the views. In fact, the styles could be placed in a separate file, and even one developer can work on the logic while a graphic designer takes care of the user interface. This is one of the features that makes React Native easy to work with in large developer teams, keeping high cohesion and low coupling and producing high-quality projects.
+ \item \textbf{Register the component:} every React Native component must be registered so it can be loaded into the JavaScript bundle. This is generally done by using \code{module.exports}, but in this case, as our component is the root component of the application and will server as its entry point, we must register it using \code{AppRegistry.registerComponent}.
+\end{itemize}
+
+\subsection{Component lifecycle}
+
+React Native components have props and state, which must be set when the component is rendered for the first time, but can also be updated. To get a clear idea on how the lifecycle works, we need to differentiate between the initial creation or mounting phase of a component, props and state triggered updates and the unmounting phase. In each scenario, a series of methods are called, which allow to configure, update or perform any necessary cleanup. These scenarios are briefly described next. To better separate what can and cannot be done in each scenario, a description of the methods that are executed is provided, along with a graph to clarify the order of execution.
+
+\begin{itemize}
+  \item \textbf{Creating or Mounting:} methods called when mounting the component.
+  \begin{itemize}
+      \item \code{getInitialState}: invoked once before the component is mounted to set the initial value of \code{this.state}.
+      \item \code{getDefaultProps}: invoked once and cached when the class is created, before any instances are created. Values not specified in \code{this.props} when creating an instance of the class will default to the ones inserted here.
+      \item \code{componentWillMount}: invoked once before the component is mounted. Modifying \code{this.state} in this method will not trigger another execution of the \code{render()} method, but instead, the component will be rendered with the updated state values.
+      \item \code{componentDidMount}: invoked once right after the component is mounted. The \code{componentDidMount()} of child components is invoked before that of parent components.
+    \end{itemize}
+  \item \textbf{Updating:} methods called when updating the component.
+    \begin{itemize}
+      \item \code{componentWillReceiveProps}: invoked when the component is receiving new props. This will trigger a render, but updating \code{this.state} will not queue an additional render.
+      \item \code{shouldComponentUpdate}: invoked before rendering when new props or state are received. Should be used to avoid rendering the component again when the developer is certaing that the update will not require another component render, therefore improving performance.
+      \item \code{componentWillUpdate}: invoked right before rendering the component when new props or state are received. Should be used to perform any required preparation before the update occurs.
+      \item \code{componentDidUpdate}: called inmediately after the component is updated.
+    \end{itemize}
+  \item \textbf{Unmounting:} methods called when unmounting the component.
+    \begin{itemize}
+      \item \code{componentWillUnmount}: called inmediately before the component is unmounted. Should be used to perform any necessary cleanup. 
+    \end{itemize}
+\end{itemize}
+
+The updating scenario has been split in two different possibilities, totaling four scenarios where these methods can be called: Initial Render (Creation or Mounting), Props Change (Updating), State Change (Updating) and Component Unmount (Unmounting). A summary comparing them is shown in Figure \ref{fig:rncomplifescenarios}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{rn_component_lifecycle_scenarios.png}
+	\caption{Component lifecycle scenarios summary\label{fig:rncomplifescenarios}}
+\end{figure}
+
+\section{Risks and Drawbacks}
+
+The largest risk that comes with using React Native is its low maturity level. As a young project, React Native still contains some bugs and unoptimizations. However, this risk is somewhat offset by the fact that Facebook is using React Native in production for their own apps. The community is also constantly contributing to the project, and updates are released every two weeks. Nevertheless, working with bleeding edge techolonogy does mean that you can experience some trouble that will get fixed over time.
+
+Another major drawback is what happens when you encounter a limitation in React Native's native supported API's. If you are only comfortable in JavaScript, the learning curve of programming languages such as Java or Objective-C is very steep, and could potentially delay a project.

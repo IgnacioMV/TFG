@@ -1,0 +1,62 @@
+\BOOKMARK [0][-]{chapter*.4}{Resumen}{}% 1
+\BOOKMARK [0][-]{chapter*.5}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter*.6}{Agradecimientos}{}% 3
+\BOOKMARK [0][-]{chapter*.6}{Contents}{}% 4
+\BOOKMARK [0][-]{section*.8}{List of Figures}{}% 5
+\BOOKMARK [0][-]{section*.10}{List of Code Listings}{}% 6
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
+\BOOKMARK [1][-]{section.1.1}{Context}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Project goals}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.3}{Structure of this document}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{Understanding Mobile Application Development Options}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Native Mobile Applications}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Web Mobile Applications}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.4}{Hybrid Mobile Applications}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.5}{Summary}{chapter.2}% 16
+\BOOKMARK [0][-]{chapter.3}{PhoneGap}{}% 17
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Apache Cordova}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{PhoneGap Main Features}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.1}{Desktop app and command line interface}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.2}{Mobile developer app}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.3}{Local and remote building}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.4}{Plugins}{section.3.3}% 24
+\BOOKMARK [0][-]{chapter.4}{React}{}% 25
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{Flux}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{JSX}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{Virtual DOM}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Example Component}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{React Native}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{The Implications of Native}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.2.1}{Asynchronus and batched}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.2}{Declarative vs Imperative:}{section.5.2}% 35
+\BOOKMARK [2][-]{subsection.5.2.3}{Learn once, write everywhere}{section.5.2}% 36
+\BOOKMARK [1][-]{section.5.3}{Architecture}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.3.1}{Runtime}{section.5.3}% 38
+\BOOKMARK [2][-]{subsection.5.3.2}{Call cycle}{section.5.3}% 39
+\BOOKMARK [1][-]{section.5.4}{Components}{chapter.5}% 40
+\BOOKMARK [2][-]{subsection.5.4.1}{Native Components}{section.5.4}% 41
+\BOOKMARK [2][-]{subsection.5.4.2}{Component lifecycle}{section.5.4}% 42
+\BOOKMARK [1][-]{section.5.5}{Risks and Drawbacks}{chapter.5}% 43
+\BOOKMARK [0][-]{chapter.6}{Test Scenario}{}% 44
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 45
+\BOOKMARK [1][-]{section.6.2}{Introduction}{chapter.6}% 46
+\BOOKMARK [2][-]{subsection.6.2.1}{Creating the project}{section.6.2}% 47
+\BOOKMARK [2][-]{subsection.6.2.2}{Running the app for the first time on the emulator}{section.6.2}% 48
+\BOOKMARK [1][-]{section.6.3}{Creating the first view}{chapter.6}% 49
+\BOOKMARK [2][-]{subsection.6.3.1}{constructor\(props\) and componentDidMount\(\)}{section.6.3}% 50
+\BOOKMARK [2][-]{subsection.6.3.2}{measureCronoImage\(\)}{section.6.3}% 51
+\BOOKMARK [2][-]{subsection.6.3.3}{onSubtractPressed\(\) and onAddPressed\(\)}{section.6.3}% 52
+\BOOKMARK [2][-]{subsection.6.3.4}{onNextOpButtonPressed\(\)}{section.6.3}% 53
+\BOOKMARK [2][-]{subsection.6.3.5}{startCrono\(\) and stopCrono\(\)}{section.6.3}% 54
+\BOOKMARK [2][-]{subsection.6.3.6}{render\(\)}{section.6.3}% 55
+\BOOKMARK [2][-]{subsection.6.3.7}{Styles}{section.6.3}% 56
+\BOOKMARK [1][-]{section.6.4}{Results}{chapter.6}% 57
+\BOOKMARK [0][-]{chapter.7}{Conclusions and Future Work}{}% 58
+\BOOKMARK [1][-]{section.7.1}{Conclusions}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.2}{Achieved Goals}{chapter.7}% 60
+\BOOKMARK [1][-]{section.7.3}{Future Work}{chapter.7}% 61
+\BOOKMARK [0][-]{section*.27}{Bibliography}{}% 62

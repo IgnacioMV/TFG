@@ -1,0 +1,37 @@
+\chapter{Conclusions and Future Work}
+\label{ch:conclusions}
+\justifying
+
+\section{Conclusions}
+
+This project has allowed us to take a deep insight into React Native. We have learnt the differences between the two main current technologies for developing hybrid mobile applications and their inner workings. 
+
+React Native's architecture has been explained in detail to ease the understanding of the technology as a whole. Runtime execution and lifecycles were detailed so a new developer can immediately start writing code and testing her app without unpleasant and unexplained bugs related to the execution order of the code.
+
+We have also developed a functional React Native app from scratch and tested it on  an Android device. Other key aspects such as React Native APIs or syntax have been addressed as well. 
+
+From my own experience as a mobile applications developer, the results attained with React Native are quite remarkable. Although the learning curve is steeper than PhoneGap's, the fact that everything the user sees and experiences is native makes React Native a decisive advantage. 
+
+I have also had my own share of native developing for Android, and is obviously more powerful than React Native. But you can also spend countless hours trying to implement a view that only takes half an hour on React Native. In addition, React Native's reusable components increase productivity, reward contributing to repositories and sharing your own work with the community.
+
+React Native is still a young project in constant development, so anyone interested in developing an application should keep up to date. Myself, when I started this work, React Native's version was 0.18. Guides, resources and explanations were scarce and hard to find, but the situation is improving. Today, on June 21st, it is 0.27, and another release is scheduled for this week. Detailed guides have been added, example applications and more and more components and APIs are included with every update.
+
+We can say without a doubt that React Native is a major improvement in the field of hybrid mobile applications. It is a techonology meant for most apps, which adds compatibility between the two biggest systems in the market without almost sacrificing performance. We will be seeing more and more apps developed using React Native in the near future.
+
+\section{Achieved Goals}
+
+In Chapter \ref{ch:intro} a list of goals was mentioned. The achieved goals can be summarized as follows:
+
+\begin{description}
+ \item \textbf{Comparing current mobile application development options:} an introduction to this subject was made in Chapter \ref{ch:mobileoptions} and expanded on Chapter \ref{ch:phonegap}.
+ \item \textbf{Understanding what React Native:} React Native is based on React, which was introduced on Chapter \ref{ch:react}. After that, we moved to React Native's key features, architecture, processes, runtime, call cycle, etc. This goal was successfully achieved.
+ \item \textbf{Design and build a simple test scenario to demonstrate React Native's capabilities:} this goal has been achieved in Chapter \ref{ch:testscenario}, where a simple app was developed in React Native, detailing the whole process.
+\end{description}
+
+\section{Future Work}
+
+This project can serve as an introduction to React Native and as a solid foundation for future mobile applications. These are some of the areas where it  be useful:
+
+\begin{itemize}
+ \item 
+\end{itemize}

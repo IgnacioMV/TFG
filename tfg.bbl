@@ -1,0 +1,203 @@
+\begin{thebibliography}{10}
+
+\bibitem{phonegap}
+{Adobe PhoneGap}.
+\newblock \url {www.phonegap.com}.
+
+\bibitem{phonegapbuild}
+{Adobe PhoneGap Build}.
+\newblock \url {https://build.phonegap.com/}.
+
+\bibitem{phonegapplugins}
+{Adobe PhoneGap Plugins}.
+\newblock \url {https://build.phonegap.com/plugins}.
+
+\bibitem{fireos}
+{Amazon Fire OS}.
+\newblock \url
+  {https://developer.amazon.com/public/solutions/platforms/android-fireos}.
+
+\bibitem{android}
+{Android}.
+\newblock \url {https://www.android.com}.
+
+\bibitem{androidstudio}
+{Android Studio}.
+\newblock \url {https://developer.android.com/studio/index.html}.
+
+\bibitem{avd}
+{Android Virtual Device}.
+\newblock \url {https://developer.android.com/studio/run/managing-avds.html}.
+
+\bibitem{androidwebview}
+{Android WebView Reference}.
+\newblock \url
+  {https://developer.android.com/reference/android/webkit/WebView.html}.
+
+\bibitem{apachecordova}
+{Apache Cordova}.
+\newblock \url {https://cordova.apache.org/}.
+
+\bibitem{blackberry10}
+{Blackberry 10}.
+\newblock \url {http://global.blackberry.com/es/software.html}.
+
+\bibitem{chromedevtools}
+{Chrome Developer Tools}.
+\newblock \url {https://developer.chrome.com/devtools}.
+
+\bibitem{dom}
+{Document Object Model Specification}.
+\newblock \url {https://www.w3.org/DOM/}.
+
+\bibitem{f8}
+{Facebook Developer Conference}.
+\newblock \url {https://www.fbf8.com/}.
+
+\bibitem{firefoxos}
+{Firefox OS}.
+\newblock \url {https://www.mozilla.org/en-US/firefox/os/}.
+
+\bibitem{flexbox}
+{Flexbox Reference}.
+\newblock \url {http://www.w3schools.com/css/css3_flexbox.asp}.
+
+\bibitem{flow}
+{Flow}.
+\newblock \url {https://flowtype.org/}.
+
+\bibitem{flux}
+{Flux}.
+\newblock \url {https://facebook.github.io/flux/}.
+
+\bibitem{genymotion}
+{Genymotion}.
+\newblock \url {https://www.genymotion.com/}.
+
+\bibitem{genymotioninstall}
+{Genymotion Installation Guide}.
+\newblock \url
+  {http://techapple.net/2014/07/tutorial-installsetup-genymotion-android-emulator-linux-ubuntulinuxmintfedoraarchlinux/#}.
+
+\bibitem{git}
+{Git}.
+\newblock \url {https://git-scm.com/}.
+
+\bibitem{repo}
+{GitHub repository of the project}.
+\newblock \url {https://github.com/IgnacioMV/Cronometer}.
+
+\bibitem{gradle}
+{Gradle}.
+\newblock \url {https://docs.gradle.org}.
+
+\bibitem{ios}
+{iOS}.
+\newblock \url {http://www.apple.com/ios/}.
+
+\bibitem{ioswebview}
+{iOS UIWebView Reference}.
+\newblock \url
+  {https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/}.
+
+\bibitem{jdk}
+{Java Development Kit 1.8}.
+\newblock \url
+  {http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html}.
+
+\bibitem{javascriptcore}
+{JavaScriptCore Reference}.
+\newblock \url
+  {https://developer.apple.com/library/tvos/documentation/Carbon/Reference/WebKit_JavaScriptCore_Ref/index.html}.
+
+\bibitem{jsx}
+{JSX}.
+\newblock \url {https://facebook.github.io/jsx/}.
+
+\bibitem{3topmarketshare}
+{Mobile/Tablet Operating System Market Share}.
+\newblock \url
+  {https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8&qpcustomd=1&qpsp=2016&qpnp=1&qptimeframe=Y}.
+
+\bibitem{node}
+{Node}.
+\newblock \url {https://nodejs.org/en/}.
+
+\bibitem{npm}
+{Node Package Manager}.
+\newblock \url {https://www.npmjs.com/}.
+
+\bibitem{nuclide}
+{Nuclide}.
+\newblock \url {https://nuclide.io/}.
+
+\bibitem{react}
+{React}.
+\newblock \url {https://facebook.github.io/react/}.
+
+\bibitem{reactnative}
+{React Native}.
+\newblock \url {https://facebook.github.io/react-native/}.
+
+\bibitem{rncli}
+{React Native Command Line Tools}.
+\newblock \url {https://www.npmjs.com/package/react-native-cli}.
+
+\bibitem{opendevtools}
+{React Native debugging}.
+\newblock \url {https://facebook.github.io/react-native/docs/debugging.html}.
+
+\bibitem{rninstallguide}
+{React Native Installation Guide}.
+\newblock \url
+  {https://facebook.github.io/react-native/docs/getting-started.html}.
+
+\bibitem{tizen}
+{Tizen}.
+\newblock \url {https://www.tizen.org/}.
+
+\bibitem{ubuntu}
+{Ubuntu}.
+\newblock \url {http://www.ubuntu.com/}.
+
+\bibitem{uml}
+{Unified Modeling Language}.
+\newblock \url {http://www.uml.org/}.
+
+\bibitem{config.xml}
+{W3C Configuration Document Specification}.
+\newblock \url {https://www.w3.org/TR/widgets/#configuration-document-0}.
+
+\bibitem{watchman}
+{Watchman}.
+\newblock \url {https://facebook.github.io/watchman/}.
+
+\bibitem{windows}
+{windows}.
+\newblock \url {https://www.microsoft.com/en-us/windows}.
+
+\bibitem{wp}
+{Windows Phone}.
+\newblock \url {https://www.microsoft.com/en-us/windows/phones}.
+
+\bibitem{xcode}
+{XCode 8}.
+\newblock \url {https://developer.apple.com/xcode/}.
+
+\bibitem{es6}
+ECMA International.
+\newblock {ECMAScript 2015 Language Specification}, 2015.
+\newblock En Línea. Disponible en: \url
+  {http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf}.
+
+\bibitem{umlbook}
+C.~Larman.
+\newblock {Applying UML and Patterns: An Introduction to Object-Oriented
+  Analysis and Design and Iterative Development}, 2004.
+
+\bibitem{runtimeconference}
+Tadeu Zagallo.
+\newblock {React Native Architecture Overview}.
+\newblock \url {https://www.youtube.com/watch?v=Ah2qNbI40vE}.
+
+\end{thebibliography}

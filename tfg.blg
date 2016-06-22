@@ -1,50 +1,196 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tfg.aux
+A level-1 auxiliary file: ./resumen.aux
+A level-1 auxiliary file: ./abstract.aux
+A level-1 auxiliary file: ./agradecimientos.aux
 A level-1 auxiliary file: ./1-introduction.aux
 A level-1 auxiliary file: ./2-mobile_options.aux
-I found no \citation commands---while reading file tfg.aux
-I found no \bibdata command---while reading file tfg.aux
-I found no \bibstyle command---while reading file tfg.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            85 strings with 522 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
+A level-1 auxiliary file: ./3-phonegap.aux
+A level-1 auxiliary file: ./4-react.aux
+A level-1 auxiliary file: ./5-react_native.aux
+A level-1 auxiliary file: ./6-test_scenario.aux
+A level-1 auxiliary file: ./7-conclusions.aux
+The style file: plain.bst
+Database file #1: ./biblio/ref.bib
+Warning--entry type for "phonegap" isn't style-file defined
+--line 1 of file ./biblio/ref.bib
+Warning--entry type for "reactnative" isn't style-file defined
+--line 5 of file ./biblio/ref.bib
+Warning--entry type for "react" isn't style-file defined
+--line 9 of file ./biblio/ref.bib
+Warning--entry type for "apachecordova" isn't style-file defined
+--line 13 of file ./biblio/ref.bib
+Warning--entry type for "fireos" isn't style-file defined
+--line 17 of file ./biblio/ref.bib
+Warning--entry type for "android" isn't style-file defined
+--line 21 of file ./biblio/ref.bib
+Warning--entry type for "blackberry10" isn't style-file defined
+--line 25 of file ./biblio/ref.bib
+Warning--entry type for "firefoxos" isn't style-file defined
+--line 29 of file ./biblio/ref.bib
+Warning--entry type for "ios" isn't style-file defined
+--line 33 of file ./biblio/ref.bib
+Warning--entry type for "ubuntu" isn't style-file defined
+--line 37 of file ./biblio/ref.bib
+Warning--entry type for "windows" isn't style-file defined
+--line 41 of file ./biblio/ref.bib
+Warning--entry type for "wp" isn't style-file defined
+--line 45 of file ./biblio/ref.bib
+Warning--entry type for "tizen" isn't style-file defined
+--line 49 of file ./biblio/ref.bib
+Warning--entry type for "config.xml" isn't style-file defined
+--line 53 of file ./biblio/ref.bib
+Warning--entry type for "ioswebview" isn't style-file defined
+--line 58 of file ./biblio/ref.bib
+Warning--entry type for "androidwebview" isn't style-file defined
+--line 62 of file ./biblio/ref.bib
+Warning--entry type for "npm" isn't style-file defined
+--line 66 of file ./biblio/ref.bib
+Warning--entry type for "3topmarketshare" isn't style-file defined
+--line 70 of file ./biblio/ref.bib
+Warning--entry type for "phonegapbuild" isn't style-file defined
+--line 74 of file ./biblio/ref.bib
+Warning--entry type for "phonegapplugins" isn't style-file defined
+--line 78 of file ./biblio/ref.bib
+Warning--entry type for "flux" isn't style-file defined
+--line 82 of file ./biblio/ref.bib
+Warning--entry type for "jsx" isn't style-file defined
+--line 86 of file ./biblio/ref.bib
+Warning--entry type for "dom" isn't style-file defined
+--line 90 of file ./biblio/ref.bib
+Warning--entry type for "f8" isn't style-file defined
+--line 94 of file ./biblio/ref.bib
+Warning--entry type for "chromedevtools" isn't style-file defined
+--line 98 of file ./biblio/ref.bib
+Warning--entry type for "javascriptcore" isn't style-file defined
+--line 102 of file ./biblio/ref.bib
+Warning--entry type for "runtimeconference" isn't style-file defined
+--line 106 of file ./biblio/ref.bib
+Warning--entry type for "rninstallguide" isn't style-file defined
+--line 111 of file ./biblio/ref.bib
+Warning--entry type for "git" isn't style-file defined
+--line 115 of file ./biblio/ref.bib
+Warning--entry type for "node" isn't style-file defined
+--line 119 of file ./biblio/ref.bib
+Warning--entry type for "rncli" isn't style-file defined
+--line 123 of file ./biblio/ref.bib
+Warning--entry type for "jdk" isn't style-file defined
+--line 127 of file ./biblio/ref.bib
+Warning--entry type for "androidstudio" isn't style-file defined
+--line 131 of file ./biblio/ref.bib
+Warning--entry type for "watchman" isn't style-file defined
+--line 135 of file ./biblio/ref.bib
+Warning--entry type for "nuclide" isn't style-file defined
+--line 139 of file ./biblio/ref.bib
+Warning--entry type for "flow" isn't style-file defined
+--line 143 of file ./biblio/ref.bib
+Warning--entry type for "avd" isn't style-file defined
+--line 147 of file ./biblio/ref.bib
+Warning--entry type for "genymotion" isn't style-file defined
+--line 151 of file ./biblio/ref.bib
+Warning--entry type for "genymotioninstall" isn't style-file defined
+--line 155 of file ./biblio/ref.bib
+Warning--entry type for "gradle" isn't style-file defined
+--line 159 of file ./biblio/ref.bib
+Warning--entry type for "xcode" isn't style-file defined
+--line 163 of file ./biblio/ref.bib
+Warning--entry type for "opendevtools" isn't style-file defined
+--line 167 of file ./biblio/ref.bib
+Warning--entry type for "uml" isn't style-file defined
+--line 171 of file ./biblio/ref.bib
+Warning--entry type for "umlbook" isn't style-file defined
+--line 175 of file ./biblio/ref.bib
+Warning--entry type for "es6" isn't style-file defined
+--line 182 of file ./biblio/ref.bib
+Warning--entry type for "flexbox" isn't style-file defined
+--line 188 of file ./biblio/ref.bib
+Warning--entry type for "repo" isn't style-file defined
+--line 192 of file ./biblio/ref.bib
+Warning--I didn't find a database entry for "ftt2011"
+Warning--to sort, need author or key in phonegap
+Warning--to sort, need author or key in reactnative
+Warning--to sort, need author or key in react
+Warning--to sort, need author or key in apachecordova
+Warning--to sort, need author or key in fireos
+Warning--to sort, need author or key in android
+Warning--to sort, need author or key in blackberry10
+Warning--to sort, need author or key in firefoxos
+Warning--to sort, need author or key in ios
+Warning--to sort, need author or key in ubuntu
+Warning--to sort, need author or key in windows
+Warning--to sort, need author or key in wp
+Warning--to sort, need author or key in tizen
+Warning--to sort, need author or key in config.xml
+Warning--to sort, need author or key in ioswebview
+Warning--to sort, need author or key in androidwebview
+Warning--to sort, need author or key in npm
+Warning--to sort, need author or key in 3topmarketshare
+Warning--to sort, need author or key in phonegapbuild
+Warning--to sort, need author or key in phonegapplugins
+Warning--to sort, need author or key in flux
+Warning--to sort, need author or key in jsx
+Warning--to sort, need author or key in dom
+Warning--to sort, need author or key in f8
+Warning--to sort, need author or key in chromedevtools
+Warning--to sort, need author or key in javascriptcore
+Warning--to sort, need author or key in rninstallguide
+Warning--to sort, need author or key in git
+Warning--to sort, need author or key in node
+Warning--to sort, need author or key in rncli
+Warning--to sort, need author or key in jdk
+Warning--to sort, need author or key in androidstudio
+Warning--to sort, need author or key in watchman
+Warning--to sort, need author or key in flow
+Warning--to sort, need author or key in nuclide
+Warning--to sort, need author or key in avd
+Warning--to sort, need author or key in genymotioninstall
+Warning--to sort, need author or key in genymotion
+Warning--to sort, need author or key in gradle
+Warning--to sort, need author or key in xcode
+Warning--to sort, need author or key in opendevtools
+Warning--to sort, need author or key in uml
+Warning--to sort, need author or key in flexbox
+Warning--to sort, need author or key in repo
+You've used 47 entries,
+            2118 wiz_defined-function locations,
+            653 strings with 7935 characters,
+and the built_in function-call counts, 7535 in all, are:
+= -- 670
+> -- 65
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 53
+- -- 6
+* -- 239
+:= -- 814
+add.period$ -- 96
+call.type$ -- 47
+change.case$ -- 144
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 91
+duplicate$ -- 329
+empty$ -- 1079
+format.name$ -- 6
+if$ -- 1849
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 47
 missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+newline$ -- 193
+num.names$ -- 6
+pop$ -- 513
+preamble$ -- 1
+purify$ -- 97
 quote$ -- 0
-skip$ -- 0
+skip$ -- 284
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 235
+swap$ -- 47
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+type$ -- 188
+warning$ -- 44
+while$ -- 6
+width$ -- 49
+write$ -- 337
+(There were 92 warnings)

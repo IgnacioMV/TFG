@@ -1,49 +1,63 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Context}{1}
-\contentsline {section}{\numberline {1.2}Project goals}{2}
-\contentsline {section}{\numberline {1.3}Structure of this document}{2}
-\contentsline {chapter}{\numberline {2}Understanding Mobile Application Development Options}{3}
-\contentsline {section}{\numberline {2.1}Introduction}{3}
-\contentsline {section}{\numberline {2.2}Native Mobile Applications}{3}
-\contentsline {section}{\numberline {2.3}Web Mobile Applications}{5}
-\contentsline {section}{\numberline {2.4}Hybrid Mobile Applications}{6}
-\contentsline {section}{\numberline {2.5}Summary}{7}
-\contentsline {chapter}{\numberline {3}PhoneGap}{9}
-\contentsline {section}{\numberline {3.1}Introduction}{9}
-\contentsline {section}{\numberline {3.2}Apache Cordova}{10}
-\contentsline {section}{\numberline {3.3}PhoneGap Main Features}{12}
-\contentsline {subsection}{\numberline {3.3.1}Desktop app and command line interface}{12}
-\contentsline {subsection}{\numberline {3.3.2}Mobile developer app}{13}
-\contentsline {subsection}{\numberline {3.3.3}Local and remote building}{13}
-\contentsline {subsection}{\numberline {3.3.4}Plugins}{13}
-\contentsline {chapter}{\numberline {4}React}{15}
-\contentsline {section}{\numberline {4.1}Introduction}{15}
-\contentsline {section}{\numberline {4.2}Flux}{15}
-\contentsline {section}{\numberline {4.3}JSX}{16}
-\contentsline {section}{\numberline {4.4}Virtual DOM}{17}
-\contentsline {section}{\numberline {4.5}Example Component}{19}
-\contentsline {chapter}{\numberline {5}React Native}{21}
-\contentsline {section}{\numberline {5.1}Introduction}{21}
-\contentsline {section}{\numberline {5.2}Main Goal}{21}
-\contentsline {section}{\numberline {5.3}Asynchronus and batched}{22}
-\contentsline {section}{\numberline {5.4}Declarative vs Imperative:}{22}
-\contentsline {subsection}{\numberline {5.4.1}Learn once, write everywhere}{23}
-\contentsline {section}{\numberline {5.5}Architecture}{23}
-\contentsline {subsection}{\numberline {5.5.1}Runtime}{23}
-\contentsline {subsection}{\numberline {5.5.2}Call cycle}{27}
-\contentsline {chapter}{\numberline {6}Test Scenario}{28}
-\contentsline {section}{\numberline {6.1}Introduction}{28}
-\contentsline {section}{\numberline {6.2}Dependencies}{28}
-\contentsline {subsection}{\numberline {6.2.1}React Native Command Line Tools}{28}
-\contentsline {subsection}{\numberline {6.2.2}Node Package Manager}{29}
-\contentsline {subsection}{\numberline {6.2.3}Gradle}{29}
-\contentsline {subsection}{\numberline {6.2.4}Watchman}{29}
-\contentsline {subsection}{\numberline {6.2.5}Flow}{29}
-\contentsline {subsection}{\numberline {6.2.6}Android SDK}{29}
-\contentsline {subsection}{\numberline {6.2.7}Nuclide}{29}
-\contentsline {subsection}{\numberline {6.2.8}Genymotion}{29}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{30}
-\contentsline {section}{\numberline {7.1}Conclusions}{30}
-\contentsline {section}{\numberline {7.2}Achieved Goals}{30}
-\contentsline {section}{\numberline {7.3}Future Work}{30}
+\contentsline {chapter}{Resumen}{V}{chapter*.4}
+\contentsline {chapter}{Abstract}{VII}{chapter*.5}
+\contentsline {chapter}{Agradecimientos}{IX}{chapter*.6}
+\contentsline {chapter}{Contents}{X}{chapter*.6}
+\contentsline {chapter}{List of Figures}{XII}{section*.8}
+\contentsline {chapter}{List of Code Listings}{XIII}{section*.10}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Context}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Project goals}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Structure of this document}{2}{section.1.3}
+\contentsline {chapter}{\numberline {2}Understanding Mobile Application Development Options}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Native Mobile Applications}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Web Mobile Applications}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Hybrid Mobile Applications}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Summary}{8}{section.2.5}
+\contentsline {chapter}{\numberline {3}PhoneGap}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Apache Cordova}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}PhoneGap Main Features}{11}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Desktop app and command line interface}{11}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Mobile developer app}{12}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Local and remote building}{12}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Plugins}{12}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {4}React}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}Flux}{13}{section.4.2}
+\contentsline {section}{\numberline {4.3}JSX}{14}{section.4.3}
+\contentsline {section}{\numberline {4.4}Virtual DOM}{15}{section.4.4}
+\contentsline {section}{\numberline {4.5}Example Component}{16}{section.4.5}
+\contentsline {chapter}{\numberline {5}React Native}{18}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{18}{section.5.1}
+\contentsline {section}{\numberline {5.2}The Implications of Native}{18}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Asynchronus and batched}{19}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Declarative vs Imperative:}{19}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Learn once, write everywhere}{20}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Architecture}{20}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Runtime}{21}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Call cycle}{23}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Components}{25}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Native Components}{25}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Component lifecycle}{26}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Risks and Drawbacks}{28}{section.5.5}
+\contentsline {chapter}{\numberline {6}Test Scenario}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Introduction}{30}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Creating the project}{31}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Running the app for the first time on the emulator}{32}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Creating the first view}{34}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}constructor(props) and componentDidMount()}{36}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}measureCronoImage()}{37}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}onSubtractPressed() and onAddPressed()}{38}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}onNextOpButtonPressed()}{38}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}startCrono() and stopCrono()}{39}{subsection.6.3.5}
+\contentsline {subsection}{\numberline {6.3.6}render()}{39}{subsection.6.3.6}
+\contentsline {subsection}{\numberline {6.3.7}Styles}{43}{subsection.6.3.7}
+\contentsline {section}{\numberline {6.4}Results}{45}{section.6.4}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{46}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{46}{section.7.1}
+\contentsline {section}{\numberline {7.2}Achieved Goals}{47}{section.7.2}
+\contentsline {section}{\numberline {7.3}Future Work}{47}{section.7.3}
+\contentsline {chapter}{Bibliography}{49}{section*.27}
